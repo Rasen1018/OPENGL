@@ -7,12 +7,6 @@ Widget::Widget(QWidget *parent) : QOpenGLWidget(parent)
 
     setWindowTitle("OpenGL Cube");
     resize(300, 300);
-
-/*    QTimer* timer = new QTimer(this);
-    connect(timer, &QTimer::timeout, [=](){
-        update();
-    });
-    timer->start(1000/60); */
 }
 
 Widget::~Widget()
@@ -60,36 +54,4 @@ void Widget::paintGL( )
 
     //glPopMatrix();
     glFlush( );
-}
-
-void Widget::keyPressEvent(QKeyEvent* event)
-{
-    switch(event->key( )) {
-
-    case Qt::Key_1:
-        //yAngle += 2;
-        break;
-    case Qt::Key_2:
-        //yAngle -= 2;
-        break;
-    case Qt::Key_3:
-        //xAngle += 2;
-        break;
-    case Qt::Key_4:
-        //xAngle -= 2;
-        break;
-    case Qt::Key_5:
-        //zAngle += 2;
-        break;
-    case Qt::Key_6:
-        //zAngle -= 2;
-        break;
-    case Qt::Key_0:
-        //xAngle = yAngle = zAngle = 0.0;
-        break;
-    };
-
-    //QString str = QString("Cube3D : x : %1, y : %2, z : %3").arg(xAngle).arg(yAngle).arg(zAngle);
-    //setWindowTitle(str);
-    update( );
 }

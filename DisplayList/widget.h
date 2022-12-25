@@ -18,8 +18,6 @@ protected:
      void initializeGL( ) override;
      void paintGL( ) override;
      void resizeGL(int w, int h) override;
-     void keyPressEvent(QKeyEvent* event) override;
-
 private:
 };
 
